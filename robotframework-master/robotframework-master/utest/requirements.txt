@@ -1,0 +1,5 @@
+# Dependencies needed by unit and acceptance tests.
+
+docutils >= 0.10
+jsonschema
+typing_extensions >= 4.13

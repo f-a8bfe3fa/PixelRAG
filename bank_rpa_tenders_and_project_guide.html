@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>银行 RPA 招标信息汇总与面试项目指南</title>
+<style>
+  body { font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.6; max-width: 1200px; margin: 0 auto; padding: 24px; color: #222; }
+  h1 { font-size: 28px; border-bottom: 2px solid #2b6cb0; padding-bottom: 8px; }
+  h2 { font-size: 22px; margin-top: 32px; color: #2c5282; }
+  h3 { font-size: 18px; margin-top: 24px; color: #2a4365; }
+  p { margin: 10px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 14px; }
+  th, td { border: 1px solid #cbd5e0; padding: 8px; text-align: left; vertical-align: top; }
+  th { background: #edf2f7; font-weight: 600; }
+  tr:nth-child(even) { background: #f7fafc; }
+  a { color: #2b6cb0; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .note { background: #fffaf0; border-left: 4px solid #ed8936; padding: 12px; margin: 14px 0; }
+  .project { background: #f0fff4; border-left: 4px solid #38a169; padding: 14px; margin: 14px 0; }
+  .project h4 { margin: 0 0 8px; color: #276749; }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .sources { font-size: 13px; }
+  .sources li { margin: 4px 0; word-break: break-all; }
+  sup a { font-size: 12px; }
+  .badge { display: inline-block; padding: 1px 6px; border-radius: 4px; background: #e2e8f0; font-size: 12px; margin-left: 4px; }
+</style>
+</head>
+<body>
+
+<h1>银行 RPA 招标信息汇总与面试项目指南</h1>
+<p><strong>检索时间：</strong>2026-06-24 | <strong>数据来源：</strong>银行官网、中国招标投标公共服务平台、政府采购网、招标网及行业媒体等公开渠道</p>
+<p>本文档按你要求，把 2024–2026 年银行 RPA / 机器人流程自动化 / 数字员工相关公开招标、中标及供应商征集公告做了系统整理，并据此提炼出可直接练手的“仿真实战项目”方案，方便你补项目经验、准备面试。</p>
+
+<div class="note">
+<strong>诚实提示：</strong>没有真实交付经验时，建议把项目写成“<strong>基于公开招标文件复现的个人/练手项目</strong>”或“<strong>RPA 仿真实战项目</strong>”。这样既展示了动手能力，也避免简历造假。面试时重点讲清楚需求分析、流程设计、异常处理、上线验证、文档输出等项目管理思维。
+</div>
+
+<h2>一、为什么要先看招标文件？</h2>
+<p>银行招标文件直接暴露了甲方真正关心的东西：</p>
+<ul>
+  <li><strong>业务场景：</strong>对账、票据、税务、监管报送、反洗钱、信贷审批等；</li>
+  <li><strong>技术要求：</strong>RPA 控制台/设计器/机器人许可、信创适配、MySQL/Redis、Python/.NET/Java、7×24 稳定性、审计日志；</li>
+  <li><strong>交付要求：</strong>项目经理/业务分析师/开发工程师角色、PMP/RPA 认证、CMMI/ISO 资质、POC 测试、培训与文档。</li>
+</ul>
+<p>看懂这些后，你就能反向设计一个“看起来像银行项目”的个人作品，而不是只会拖拽几个模块。</p>
+
+<h2>二、2024–2026 年银行 RPA 招标/中标公告汇总</h2>
+<p>以下只收录与 RPA / 流程机器人 / 数字员工强相关的项目，剔除纯硬件机器人、机房巡检等非 RPA 项目。</p>
+
+<h3>2.1 国有大行 / 股份制银行</h3>
+<table>
+<thead>
+<tr><th>银行</th><th>项目名称</th><th>发布时间</th><th>采购方式 / 状态</th><th>主要内容 / 场景</th><th>金额/限价</th><th>来源</th></tr>
+</thead>
+<tbody>
+<tr><td>浦发银行</td><td>总行 2024–2025 年度机器人流程自动化系统产品订阅服务</td><td>2024-07</td><td>单一来源成交</td><td>RPA 系统产品订阅服务</td><td>180 万元</td><td><a href="#cite6"><sup>[6]</sup></a></td></tr>
+<tr><td>浦发银行</td><td>2026–2027 年 RPA 软件许可与开发维护服务</td><td>2026-05</td><td>采购结果</td><td>RPA 软件许可与开发维护</td><td>240 万元</td><td><a href="#cite19"><sup>[19]</sup></a></td></tr>
+<tr><td>民生银行</td><td>2026 年度数字员工流程机器人（RPA 无人值守机器人）软件许可及服务</td><td>2026-04</td><td>单一来源采购前公告</td><td>260 个无人值守机器人一年期许可及服务</td><td>137.8 万元</td><td><a href="#cite4"><sup>[4]</sup></a></td></tr>
+<tr><td>民生银行</td><td>数字员工流程机器人软件（RPA 无人值守机器人）项目</td><td>2024-12</td><td>单一来源采购前公告</td><td>190 个 RPA 无人值守机器人软件许可</td><td>未披露</td><td><a href="#cite20"><sup>[20]</sup></a></td></tr>
+<tr><td>华夏银行</td><td>2025–2026 年机器人流程自动化项目</td><td>2026-01</td><td>竞争性磋商公告</td><td>采购 RPA 控制台、设计器、机器人使用许可；要求原厂、信创适配、大模型应用经验</td><td>未披露</td><td><a href="#cite1"><sup>[1]</sup></a></td></tr>
+<tr><td>兴业银行</td><td>金田螺 RPA 平台升级改造项目</td><td>2026-06</td><td>供应商征集调研</td><td>对接通用大模型生成 RPA 代码、麒麟桌面适配、统一门户、RBAC、多维监控</td><td>未披露</td><td><a href="#cite10"><sup>[10]</sup></a></td></tr>
+<tr><td>广发银行</td><td>总行机器人流程自动化（RPA）产品采购项目</td><td>2026-03</td><td>单一来源中选结果</td><td>RPA 产品</td><td>未披露</td><td><a href="#cite22"><sup>[22]</sup></a></td></tr>
+<tr><td>光大银行信用卡中心</td><td>信用卡 RPA 机器人流程实施服务采购项目</td><td>2024-02</td><td>公开招标中标</td><td>不少于 500 人天的 RPA 流程实施服务</td><td>54.8 万元</td><td><a href="#cite21"><sup>[21]</sup></a></td></tr>
+<tr><td>农业银行广州分行</td><td>中山大学附属第一医院银医直连及配套系统（包 3：财务收费机器人 RPA）</td><td>2026-02</td><td>公开招标公告</td><td>财务收费机器人 RPA</td><td>最高限价 107 万元</td><td><a href="#cite18"><sup>[18]</sup></a></td></tr>
+<tr><td>工商银行江苏省分行</td><td>常州市第一人民医院智慧机器人综合管理平台</td><td>2026-06</td><td>公开招标公告</td><td>智慧机器人综合管理平台，含财务机器人事务处理模块</td><td>最高限价 170.08 万元</td><td><a href="#cite23"><sup>[23]</sup></a></td></tr>
+<tr><td>建设银行湖北省分行</td><td>深化流程自动化机器人（RPA）应用项目</td><td>2024-09</td><td>供应商征集 / 2025-03 中标</td><td>30 个 RPA License + 36 人月流程定制；数据处理通报、可视化简报、信创迁移</td><td>120.6 万元</td><td><a href="#cite9"><sup>[9]</sup></a></td></tr>
+<tr><td>建设银行贵州省分行</td><td>贵州大学“财务系统流程自动化”采购项目</td><td>2026-06</td><td>供应商二次征集</td><td>高校财务系统流程自动化、RPA 软件及应用实施</td><td>未披露</td><td><a href="#cite24"><sup>[24]</sup></a></td></tr>
+<tr><td>邮储银行甘肃省分行</td><td>2026–2029 年信息科技软件研发外包项目</td><td>2026-04</td><td>公开招标</td><td>软件研发外包，含 RPA 脚本开发等</td><td>475 万元</td><td><a href="#cite25"><sup>[25]</sup></a></td></tr>
+<tr><td>邮储银行山西省分行</td><td>2025 年 RPA 流程自动化项目研发服务</td><td>2026-01</td><td>中标候选人公示</td><td>基于总行流程机器人系统的 RPA 自动化流程开发及日常维护</td><td>约 1.6–1.99 万元/人月</td><td><a href="#cite26"><sup>[26]</sup></a></td></tr>
+<tr><td>邮储银行深圳分行</td><td>RPA 机器人流程自动化系统 2025 年新增功能项目</td><td>2025-09</td><td>单一来源结果</td><td>RPA 系统新增功能建设</td><td>36.39 万元</td><td><a href="#cite27"><sup>[27]</sup></a></td></tr>
+<tr><td>中国银行天津市分行</td><td>2026 年智能机器人外包服务项目</td><td>2026-05</td><td>公开招标</td><td>智能机器人系统搭建、功能开发、运维支持及持续服务</td><td>最高限价 110 万元</td><td><a href="#cite12"><sup>[12]</sup></a></td></tr>
+<tr><td>中国银行青海省分行</td><td>2025 年 RPA 特色场景一期建设项目</td><td>2025-08</td><td>竞争性磋商</td><td>22 个 RPA 特色场景建设服务</td><td>未披露</td><td><a href="#cite16"><sup>[16]</sup></a></td></tr>
+<tr><td>青岛银行</td><td>2025 年机器人流程自动化平台软件授权采购项目</td><td>2025</td><td>单一来源公示</td><td>RPA 平台软件授权</td><td>48.06 万元</td><td><a href="#cite11"><sup>[11]</sup></a></td></tr>
+</tbody>
+</table>
+
+<h3>2.2 城商行 / 农商行 / 农信社 / 银行理财子公司</h3>
+<table>
+<thead>
+<tr><th>银行/机构</th><th>项目名称</th><th>发布时间</th><th>主要内容 / 场景</th><th>金额/限价</th><th>来源</th></tr>
+</thead>
+<tbody>
+<tr><td>成都银行</td><td>虚拟数字员工采购项目</td><td>2026-06</td><td>虚拟数字员工建设</td><td>未披露</td><td><a href="#cite28"><sup>[28]</sup></a></td></tr>
+<tr><td>上海农商银行</td><td>2026 年度机器人流程自动化平台维保及 license 服务</td><td>2026-05</td><td>RPA 平台维保及 license 服务</td><td>未披露</td><td><a href="#cite29"><sup>[29]</sup></a></td></tr>
+<tr><td>青银理财</td><td>RPA 自动化平台项目</td><td>2026-04</td><td>完整 RPA 平台软件产品及定制化开发服务</td><td>26.6 万元</td><td><a href="#cite30"><sup>[30]</sup></a></td></tr>
+<tr><td>南京银行</td><td>RPA 流程机器人系统 license 框架采购项目</td><td>2026-04</td><td>RPA 流程机器人系统 license 框架</td><td>未披露</td><td><a href="#cite31"><sup>[31]</sup></a></td></tr>
+<tr><td>福建省农村信用社联合社</td><td>RPA 机器人流程自动化升级项目</td><td>2026-03</td><td>RPA 机器人及开发平台 License 授权、维保升级</td><td>172.6 万元</td><td><a href="#cite32"><sup>[32]</sup></a></td></tr>
+<tr><td>鞍山银行</td><td>机器人流程自动化（RPA）项目二期</td><td>2026-03</td><td>RPA 项目二期升级</td><td>119.6 万元</td><td><a href="#cite33"><sup>[33]</sup></a></td></tr>
+<tr><td>和县农商银行</td><td>信贷流程自动化系统采购项目</td><td>2026-03</td><td>信贷流程自动化</td><td>19 万元</td><td><a href="#cite34"><sup>[34]</sup></a></td></tr>
+<tr><td>宁银理财</td><td>流程自动化机器人（RPA）产品 2026 年一期项目</td><td>2026-02</td><td>表单自动制作、报告处理、研报辅助、一致性校验</td><td>未披露</td><td><a href="#cite35"><sup>[35]</sup></a></td></tr>
+<tr><td>绵阳市商业银行</td><td>RPA 数字助手技术升级改造</td><td>2026-01</td><td>RPA 数字助手技术升级</td><td>未披露</td><td><a href="#cite36"><sup>[36]</sup></a></td></tr>
+<tr><td>东营银行</td><td>RPA 机器人流程自动化项目二期建设</td><td>2026-01</td><td>RPA 机器人流程自动化二期建设</td><td>25 万元</td><td><a href="#cite37"><sup>[37]</sup></a></td></tr>
+<tr><td>德州银行</td><td>采购机器人流程自动化（RPA）系统项目</td><td>2025-10</td><td>部署 RPA 系统（1 控制台、1 设计器、3 机器人）</td><td>未披露</td><td><a href="#cite38"><sup>[38]</sup></a></td></tr>
+<tr><td>成都银行</td><td>机器人流程自动化工具采购项目</td><td>2025-10</td><td>机器人流程自动化工具</td><td>89.6 万元</td><td><a href="#cite39"><sup>[39]</sup></a></td></tr>
+<tr><td>南京银行南京分行</td><td>2025 年度 RPA 机器人许可采购项目</td><td>2025-10</td><td>服务企业客户，169 套按年订阅 RPA 机器人</td><td>131.82 万元</td><td><a href="#cite40"><sup>[40]</sup></a></td></tr>
+<tr><td>湖北银行</td><td>2025 年 RPA 数字员工项目</td><td>2025-08</td><td>数字员工系统建设</td><td>未披露</td><td><a href="#cite41"><sup>[41]</sup></a></td></tr>
+<tr><td>云南省农村信用社联合社</td><td>同业合作系统建设配套第三方应用软件（包 4 RPA）</td><td>2025-08</td><td>同业合作系统配套 RPA 软件</td><td>未披露</td><td><a href="#cite42"><sup>[42]</sup></a></td></tr>
+<tr><td>安徽省农村信用社联合社</td><td>机器人流程自动化平台（二次）</td><td>2025-06</td><td>机器人流程自动化平台 + 9 种场景</td><td>29 万元</td><td><a href="#cite43"><sup>[43]</sup></a></td></tr>
+<tr><td>宁银理财</td><td>流程自动化机器人（RPA）产品 POC 项目</td><td>2025-06</td><td>网银数据查询、报表生成等 POC</td><td>未披露</td><td><a href="#cite44"><sup>[44]</sup></a></td></tr>
+<tr><td>马鞍山农商银行</td><td>机器人流程自动化（RPA）项目</td><td>2025-04</td><td>5 个网络版 + 5 个单机版机器人，15 个业务场景</td><td>控制价 35 万元 / 中标约 25 万元</td><td><a href="#cite14"><sup>[14]</sup></a> <a href="#cite45"><sup>[45]</sup></a></td></tr>
+<tr><td>海南农商银行</td><td>流程自动化项目</td><td>2025-04</td><td>流程自动化平台建设/服务</td><td>166.5 万元</td><td><a href="#cite46"><sup>[46]</sup></a></td></tr>
+<tr><td>淮安农商银行</td><td>统计分析平台 RPA 自动补录功能采购项目</td><td>2025-03</td><td>统计分析平台 RPA 自动补录</td><td>15.3 万元</td><td><a href="#cite47"><sup>[47]</sup></a></td></tr>
+<tr><td>湖南银行</td><td>2024 年 RPA 流程机器人采购及场景新增项目</td><td>2025-03</td><td>RPA 流程机器人采购及场景新增</td><td>第一候选人 156 万元 / 预算 160 万元</td><td><a href="#cite7"><sup>[7]</sup></a></td></tr>
+<tr><td>河南农村商业联合银行</td><td>智能数字员工（RPA）采购项目</td><td>2025-02</td><td>企业级 RPA+AI 平台，80 个业务场景</td><td>中标 248.4 万元 / 预算 304 万元</td><td><a href="#cite8"><sup>[8]</sup></a></td></tr>
+<tr><td>北京农商银行</td><td>业务处理监督中心 RPA 机器人流程自动化项目</td><td>2025-01</td><td>ACS 人行对账、同城票据交换、会计报表、智能数据统计</td><td>未披露</td><td><a href="#cite5"><sup>[5]</sup></a></td></tr>
+<tr><td>山东省农村信用社联合社</td><td>RPA 机器人流程自动化系统采购项目</td><td>2024-12</td><td>RPA 机器人流程自动化系统</td><td>118 万元</td><td><a href="#cite48"><sup>[48]</sup></a></td></tr>
+<tr><td>北京银行</td><td>RPA 机器人自动化平台 2024 年建设项目（机器人授权采购）</td><td>2024-09</td><td>RPA 机器人授权采购</td><td>135.85 万元</td><td><a href="#cite49"><sup>[49]</sup></a></td></tr>
+<tr><td>长安银行</td><td>机器人流程自动化（RPA）应用推广项目</td><td>2024-09</td><td>RPA 应用推广</td><td>360 万元</td><td><a href="#cite50"><sup>[50]</sup></a></td></tr>
+<tr><td>龙江银行</td><td>RPA 流程自动化系统开发服务外包采购项目</td><td>2024-08</td><td>RPA 流程自动化系统开发服务外包</td><td>未披露</td><td><a href="#cite51"><sup>[51]</sup></a></td></tr>
+<tr><td>齐鲁银行</td><td>RPA 流程机器人项目</td><td>2024-07</td><td>RPA 流程机器人</td><td>21 万元</td><td><a href="#cite50"><sup>[50]</sup></a></td></tr>
+<tr><td>江苏江阴农商银行</td><td>RPA 流程自动化采购项目</td><td>2024-07</td><td>RPA 流程自动化</td><td>未披露</td><td><a href="#cite50"><sup>[50]</sup></a></td></tr>
+<tr><td>嘉兴银行</td><td>RPA 自动化流程平台二期建设项目</td><td>2024-07</td><td>RPA 自动化流程平台二期建设</td><td>27.5 万元</td><td><a href="#cite50"><sup>[50]</sup></a></td></tr>
+<tr><td>新疆银行</td><td>企业级 RPA 平台项目</td><td>2024-07</td><td>企业级 RPA 平台（设计器、机器人、控制台）+ AI</td><td>40 万元</td><td><a href="#cite50"><sup>[50]</sup></a></td></tr>
+<tr><td>吉林省农村信用社联合社</td><td>机器人流程自动化系统（RPA）项目（二次）</td><td>2024-07</td><td>RPA 系统</td><td>44 万元</td><td><a href="#cite52"><sup>[52]</sup></a></td></tr>
+<tr><td>北京银行天津分行</td><td>2024 年 RPA 机器人建设项目</td><td>2024-06</td><td>业务流程优化改造 RPA 定制开发</td><td>预算 30 万元</td><td><a href="#cite53"><sup>[53]</sup></a></td></tr>
+</tbody>
+</table>
+
+<div class="note">
+<strong>补充说明：</strong>村镇银行在公开平台上极少单独发 RPA 标，通常由省联社、主发起行或投管行统一采购后共用。如果你目标是农商行/村镇银行科技岗，重点看“省联社 RPA 平台 + 辖内场景推广”这类模式。
+</div>
+
+<h2>三、银行 RPA 高频业务场景提炼</h2>
+<p>把上面招标文件出现的关键词归类后，得到以下典型场景。你可以直接挑选 1–2 个做为自己的练手项目方向。</p>
+<table>
+<thead>
+<tr><th>业务场景</th><th>场景说明</th><th>典型来源</th></tr>
+</thead>
+<tbody>
+<tr><td>人行 ACS 对账</td><td>自动登录人行 ACS（中央银行会计核算数据集中系统），下载对账单、与行内账务核对、生成差异表。</td><td><a href="#cite5"><sup>[5]</sup></a></td></tr>
+<tr><td>同城票据交换 / 提入明细处理</td><td>自动登录票据交换平台下载提入明细清单，登录票据集中提回系统签到并导入数据。</td><td><a href="#cite5"><sup>[5]</sup></a></td></tr>
+<tr><td>会计报表 / 简报自动生成</td><td>登录业务系统抓取数据，按模板生成会计报表或运营简报，定时邮件发送。</td><td><a href="#cite5"><sup>[5]</sup></a></td></tr>
+<tr><td>税务申报自动化</td><td>覆盖个税、印花税、财务报表、重点税源报表等，完成数据采集、校验、填报、提交全流程。</td><td><a href="#cite3"><sup>[3]</sup></a></td></tr>
+<tr><td>监管报送 / 数据补录</td><td>从核心系统、信贷系统抽取数据，填充 1104 报表、非现场监管报表等模板，自动补录缺失数据。</td><td><a href="#cite43"><sup>[43]</sup></a> <a href="#cite47"><sup>[47]</sup></a> <a href="#cite55"><sup>[55]</sup></a></td></tr>
+<tr><td>反洗钱 / 可疑交易监测</td><td>自动完成客户风险评级、可疑交易监测、协查报告生成及风险事件处置。</td><td><a href="#cite54"><sup>[54]</sup></a> <a href="#cite55"><sup>[55]</sup></a></td></tr>
+<tr><td>信贷审批 / 贷后风险管理</td><td>自动采集征信、工商、司法、流水数据，按规则初筛客户资质、评估额度并生成预警报告。</td><td><a href="#cite56"><sup>[56]</sup></a> <a href="#cite57"><sup>[57]</sup></a></td></tr>
+<tr><td>对公开户 KYC / 尽职调查</td><td>核验营业执照、法人身份证、征信、工商信息，筛查黑名单与涉案信息，输出合规报告。</td><td><a href="#cite56"><sup>[56]</sup></a> <a href="#cite57"><sup>[57]</sup></a></td></tr>
+<tr><td>银企对账 / 账户对账</td><td>自动下载银行流水、匹配企业账目与内部分户账，标记异常并生成差异报告。</td><td><a href="#cite57"><sup>[57]</sup></a> <a href="#cite58"><sup>[58]</sup></a></td></tr>
+<tr><td>信用卡审批</td><td>自动收集客户信息、执行信用检查、收入核查与反欺诈初筛。</td><td><a href="#cite57"><sup>[57]</sup></a></td></tr>
+<tr><td>欺诈检测 / 反欺诈</td><td>7×24 小时实时监控交易，标记高频小额转账、异常登录等行为。</td><td><a href="#cite55"><sup>[55]</sup></a> <a href="#cite57"><sup>[57]</sup></a></td></tr>
+<tr><td>财务报告与总账</td><td>自动整合多系统财务数据，生成利润表、资产负债表，更新总账。</td><td><a href="#cite57"><sup>[57]</sup></a></td></tr>
+</tbody>
+</table>
+
+<h2>四、招标文件里透出的技术要求</h2>
+<p>综合华夏银行、兴业银行、民生银行等公告，银行对 RPA 供应商/工程师的核心要求如下：</p>
+<ul>
+  <li><strong>平台组件：</strong>机器人控制台（Console）、机器人设计器（Studio）、机器人执行器（Robot/Runner）、无人值守/有人值守许可。</li>
+  <li><strong>信创适配：</strong>支持统信、麒麟、红旗等国产操作系统，支持鲲鹏、飞腾、海光、龙芯等国产 CPU，支持腾讯/阿里/华为云服务器。</li>
+  <li><strong>开发语言：</strong>C# / .NET（WPF/WWF/Winform）、Java、Python 至少精通一种；前端需 Vue/React/Angular 之一。</li>
+  <li><strong>数据库/中间件：</strong>MySQL、Redis、Elastic Search、MQ；Spring Boot / Spring Cloud。</li>
+  <li><strong>通信协议：</strong>HTTP(S)、WebSocket、GRPC、Named Pipe。</li>
+  <li><strong>智能化：</strong>OCR、NLP、大模型生成 RPA 代码、智能代码助手。</li>
+  <li><strong>稳定性：</strong>7×24 小时稳定运行、异常自动重试、人工介入机制、完整审计日志。</li>
+  <li><strong>安全合规：</strong>通过第三方安全测试、等保、密码测评、ISO27001、CMMI3/5、TMMI5 等。</li>
+  <li><strong>项目管理：</strong>PMP、RPA 厂商认证、需求分析、流程挖掘、POC 测试、培训与文档。</li>
+</ul>
+<p>这些信息直接决定了你练手项目应该覆盖哪些技术点，也决定你在面试时该强调什么。</p>
+
+<h2>五、可写进简历的“仿真实战项目”方案</h2>
+<p>下面给出 3 个贴近真实招标需求、技术栈与岗位要求匹配的项目方案。建议先挑<strong>项目一或项目二</strong>完整做完，能跑通、能演示、能讲清楚，比做十个半成品更有用。</p>
+
+<div class="project">
+<h4>项目一：业务处理监督中心 RPA 机器人（基于北京农商银行公告复现）</h4>
+<p><strong>项目背景：</strong>参考北京农商银行“业务处理监督中心 RPA 机器人流程自动化项目”<a href="#cite5"><sup>[5]</sup></a>，模拟银行运营后台每日重复性操作。</p>
+<p><strong>核心功能：</strong></p>
+<ul>
+  <li>自动登录“人行 ACS 系统”模拟页面，下载对账文件，与行内 Excel 账务进行核对，输出差异报告；</li>
+  <li>自动登录“同城票据交换信息管理平台”下载提入明细，完成“票据集中提回系统”签到与数据导入；</li>
+  <li>自动抓取票据系统数据，按模板生成会计简报，并定时发送邮件给指定人员；</li>
+  <li>异常处理：页面加载失败、数据缺失、对账不平自动重试并记录日志。</li>
+</ul>
+<p><strong>技术栈：</strong>UiPath / 影刀 RPA / 来也 UiBot（三选一）+ Python 辅助处理 Excel + MySQL 记录运行日志 + SMTP 邮件。</p>
+<p><strong>输出物：</strong>需求说明书、流程设计文档、RPA 流程源码、测试用例、运行日志样例、操作手册。</p>
+<p><strong>简历写法：</strong>“基于北京农商银行公开招标文件，独立复现‘业务处理监督中心 RPA 机器人’POC，覆盖 ACS 对账、票据导入、简报生成 4 个场景，设计异常重试与日志审计机制，输出完整需求/设计/测试文档。”</p>
+</div>
+
+<div class="project">
+<h4>项目二：财务税务申报 RPA 流程机器人（基于宁波银行公告复现）</h4>
+<p><strong>项目背景：</strong>参考宁波银行“财务税务申报 RPA 流程建设项目”<a href="#cite3"><sup>[3]</sup></a>，聚焦税务合规与财务运营效率。</p>
+<p><strong>核心功能：</strong></p>
+<ul>
+  <li>从财务系统/Excel 中采集个税、印花税、财务报表、重点税源报表等数据；</li>
+  <li>进行表内/跨表逻辑校验，自动识别异常值并提示人工介入；</li>
+  <li>模拟登录电子税务局，自动填报并提交申报表（可用沙箱或 Mock 页面替代）；</li>
+  <li>自动读取、下载、拆分报表，按总行/分行/支行维度分发，并调整尾差。</li>
+</ul>
+<p><strong>技术栈：</strong>Python + Selenium/Playwright + pandas + openpyxl + OCR（Tesseract/EasyOCR）+ MySQL + APScheduler 定时调度。</p>
+<p><strong>输出物：</strong>税务申报流程设计图、校验规则表、Python 脚本、MySQL 数据库脚本、运行报告。</p>
+<p><strong>简历写法：</strong>“参考宁波银行税务 RPA 招标文件，使用 Python+Selenium 实现多税种申报数据采集、校验、填报与分发，建立异常重试与尾差调整机制，覆盖个税、印花税、财务报表等核心税种。”</p>
+</div>
+
+<div class="project">
+<h4>项目三：监管报送数据补录机器人（基于农信/农商行场景复现）</h4>
+<p><strong>项目背景：</strong>参考安徽农信“机器人流程自动化平台 + 9 种场景”<a href="#cite43"><sup>[43]</sup></a>、淮安农商银行“统计分析平台 RPA 自动补录”<a href="#cite47"><sup>[47]</sup></a>。</p>
+<p><strong>核心功能：</strong></p>
+<ul>
+  <li>从多个 Excel/CSV/数据库表抽取监管报送所需字段；</li>
+  <li>按 1104 报表模板进行字段映射、数据清洗、缺失值补录；</li>
+  <li>生成校验报告：空值率、同比异常、跨表勾稽关系检查；</li>
+  <li>将结果写入 MySQL，并邮件通知业务人员复核。</li>
+</ul>
+<p><strong>技术栈：</strong>Python + pandas + SQLAlchemy + MySQL + openpyxl + logging。</p>
+<p><strong>输出物：</strong>数据映射文档、Python ETL 脚本、MySQL 表结构、校验规则说明、运行日志。</p>
+<p><strong>简历写法：</strong>“基于农信机构公开招标文件，设计监管报送数据补录机器人，完成多源数据抽取、模板映射、缺失补录与异常校验，提升报送数据质量。”</p>
+</div>
+
+<h2>六、简历 / 面试表达建议</h2>
+<ul>
+  <li><strong>不要伪造工作经历。</strong>可以写“个人 RPA 仿真实战项目（基于华夏银行/北京农商行/宁波银行公开招标文件）”。</li>
+  <li><strong>突出项目管理思维：</strong>需求调研 → 流程设计 → 开发配置 → 单元测试 → 集成测试 → 上线运维 → 培训交付，完整走一遍。</li>
+  <li><strong>用数字说话：</strong>“覆盖 X 个场景”“异常重试 Y 次”“生成 Z 张报表”“节省约 N 工时/月”。</li>
+  <li><strong>强调岗位匹配点：</strong>Python、MySQL、UiPath/UiBot/影刀、业务调研、POC 测试、技术文档、培训。</li>
+  <li><strong>准备演示：</strong>面试时带一个 3–5 分钟的录屏或现场演示，比口头描述更有说服力。</li>
+</ul>
+
+<h2>七、推荐学习路径与资源</h2>
+<ul>
+  <li><strong>RPA 工具：</strong>UiPath Community Edition（免费）、影刀 RPA（社区版免费）、来也 UiBot 社区版。</li>
+  <li><strong>官方认证：</strong>UiPath RPA Associate、影刀 RPA 开发者认证、来也 UiBot 认证。</li>
+  <li><strong>Python 自动化：</strong>Selenium/Playwright 网页自动化、openpyxl/pandas Excel 处理、APScheduler 定时任务。</li>
+  <li><strong>练手网站：</strong>RPA Challenge（网页录入练习）、模拟电子税务局/ACS 页面（可用本地 HTML 或公开测试环境）。</li>
+  <li><strong>面试准备：</strong>把本报告中“高频场景”和“技术要求”变成你能讲清楚的案例，尤其是异常处理和日志审计。</li>
+</ul>
+
+<h2>参考来源</h2>
+<ol class="sources">
+<li id="cite1">华夏银行. 华夏银行 2025–2026 年机器人流程自动化项目竞争性磋商公告. https://www.hxb.com.cn/jrhx/hxzx/hxxw/cggg/zbgg/2026/01/134662.shtml</li>
+<li id="cite2">必联网. 南京银行南京分行 2025–2026 年 RPA 机器人许可采购项目招标公告. https://www.ebnew.com/businessShow/704216711.html</li>
+<li id="cite3">宁波银行. 宁波银行股份有限公司财务税务申报 RPA 流程建设项目供应商召集公告. http://www.nbgodo.com/info.aspx?chid=11&id=11606</li>
+<li id="cite4">招标网. 中国民生银行股份有限公司 2026 年度数字员工流程机器人（RPA 无人值守机器人）商业软件许可及服务采购项目单一来源采购前公告. https://beijing.zhaobiao.cn/bidding_v_d927f8b0afb8707aee1f21a088ba256f.html</li>
+<li id="cite5">北京农商银行. 2025-001-业务处理监督中心 RPA 机器人流程自动化项目公告. https://www.bjrcb.com/wap/cn/index/yincang/c1519673/20250103/128627.shtml</li>
+<li id="cite6">浦发银行. 上海浦东发展银行总行 2024–2025 年度机器人流程自动化系统产品订阅服务项目采购成交结果公告. https://news.spdb.com.cn/about_spd/cggg/cgcjjggg/202407/P020240712401370315994.pdf</li>
+<li id="cite7">湖南银行. 湖南银行 2024 年 RPA 流程机器人采购及场景新增项目中标候选人公示. https://www.hunan-bank.com/96599/2025-03/07/article_2025030708514619293.shtml</li>
+<li id="cite8">河南豫信招标. 河南农村商业联合银行股份有限公司智能数字员工（RPA）采购项目中标公告. http://www.yuxinbidding.com/biddingproject_news/show_19581.html</li>
+<li id="cite9">网易新闻（云头条）. 121 万、中国建设银行 RPA 大单. https://m.163.com/dy/article/JRG6CEG50511D6RL.html</li>
+<li id="cite10">采招网. 兴业银行关于金田螺 RPA 平台升级改造项目供应商征集调研公告. https://m.bidcenter.com.cn/news-1-422233953.html</li>
+<li id="cite11">青岛银行. 青岛银行 2025 年机器人流程自动化平台软件授权采购项目单一来源公示. https://jy-datafile.oss-cn-beijing.aliyuncs.com/290fc081c78427ba4722e48894717948a903623e.pdf</li>
+<li id="cite12">国信招标. 中国银行股份有限公司天津市分行 2026 年智能机器人外包服务项目公开招标公告. https://www.gxzbcg.cn/class1/741247.html</li>
+<li id="cite13">移动支付网. 银行 RPA 中标项目达 68 个，谁是大赢家？https://www.cnblogs.com/Sheilasi/p/16386116.html</li>
+<li id="cite14">马鞍山农商银行. 马鞍山农商银行机器人流程自动化（RPA）项目招标公告. http://www.masrcb.com/info/1009/7643.htm</li>
+<li id="cite15">移动支付网. 广州农商行 RPA 运营管理平台项目招标. https://m.mpaypass.com.cn/news/202501/13102615.html</li>
+<li id="cite16">知了标讯. 中国银行股份有限公司青海省分行 2025 年 RPA 特色场景一期建设项目竞争性磋商公告. https://m.zhiliaobiaoxun.com/detail/576271461b1d5a77e51d.html</li>
+<li id="cite17">招标网. 青银理财有限责任公司 RPA 自动化平台项目公开招标公告. https://shandong.zhaobiao.cn/bidding_v_61442045724f26739c6d95ba0f15d72b.html</li>
+<li id="cite18">招标网. 中国农业银行广州分行中山大学附属第一医院银医直连及配套系统项目（包 3：财务收费机器人 RPA 项目）招标公告. https://zb.zhaobiao.cn/bidding_v_7b72a3c925e04292ad47264a96b22255.html</li>
+<li id="cite19">证券之星. 浦发银行 2026–2027 年机器人流程自动化系统 RPA 软件许可与开发维护服务采购结果. http://wap.stockstar.com/notice/JC2026052700020448.shtml</li>
+<li id="cite20">标找找. 民生银行数字员工流程机器人软件（RPA 无人值守机器人）项目单一来源采购前公告. https://m.biaozhaozhao.com/detail/73b46c4f7d65a2e17d75ef680a2f1ad3</li>
+<li id="cite21">中国招标投标公共服务平台. 光大银行信用卡中心信用卡 RPA 机器人流程实施服务采购项目中标结果. https://www.chinabidding.com/bidDetail/258995120-BidResult.html</li>
+<li id="cite22">上海招标网. 广发银行总行机器人流程自动化（RPA）产品采购项目中选结果公示. https://shanghai.zhaobiao.cn/succeed_v_7284036bc3dbedf0cecb5d2b8b522a04.html</li>
+<li id="cite23">采招网. 工商银行江苏省分行常州市第一人民医院智慧机器人综合管理平台项目公开招标公告. https://m.bidcenter.com.cn/news-1-424352291.html</li>
+<li id="cite24">电力招标. 建设银行贵州省分行贵州大学“财务系统流程自动化”采购项目供应商二次征集公告. https://m.dlzb.com/23-0-66874918-1.html</li>
+<li id="cite25">中国邮政储蓄银行采购平台. 邮储银行甘肃省分行 2026–2029 年信息科技软件研发外包项目招标公告. https://cg.psbc.com/cms/pnsb/infoDetail?id=312b77ac-15a4-43c8-823d-09d36429b5a4</li>
+<li id="cite26">中国招标投标公共服务平台. 邮储银行山西省分行 2025 年 RPA 流程自动化项目研发服务采购项目中标候选人公示. https://www.chinabidding.com/bidDetail/262546081-BidResult.html</li>
+<li id="cite27">中国招标投标公共服务平台. 邮储银行深圳分行 RPA 机器人流程自动化系统 2025 年新增功能项目成交结果公告. https://www.chinabidding.com/bidDetail/261962234-BidResult.html</li>
+<li id="cite28">招标网. 成都银行虚拟数字员工采购项目. https://m.ixbang.com/bid/detail/175386C74D49A899087DC617434DA217.html</li>
+<li id="cite29">上海农商银行采购平台. 上海农商银行 2026 年度机器人流程自动化平台维保及 license 服务项目. https://pms2g.shrcb.com/cms/cmsjieguogg/5ce6cbeeb8b140b381154b504711aa53.html</li>
+<li id="cite30">企查查. 青银理财 RPA 自动化平台项目中标结果. https://www.qcc.com/ctenderlist/f57777688612330adf0cbb51a9578b9a</li>
+<li id="cite31">江苏招标网. 南京银行股份有限公司 RPA 流程机器人系统 license 框架采购项目成交结果公告. https://jiangsu.zhaobiao.cn/succeed_v_b8f76d54bef174b56979f303797c624a.html</li>
+<li id="cite32">云飞标讯. 福建省农村信用社联合社 RPA 机器人流程自动化升级项目中标结果公示. https://www.yfbzb.com/winbid/detail/20260323_583710036.html</li>
+<li id="cite33">标找找. 鞍山银行机器人流程自动化（RPA）项目二期成交公告. https://m.biaozhaozhao.com/detail/b8c850d1ccb5cc1ca6fe6c148b7b4284</li>
+<li id="cite34">金融招标网. 和县农商银行信贷流程自动化系统采购项目成交结果公告. https://www.jrzb.cn/bidDetail/475EBC8F303F480F892C7528B8023DF0.html</li>
+<li id="cite35">宁波银行. 宁银理财流程自动化机器人（RPA）产品 2026 年一期项目供应商召集公告. http://www.nbgodo.com/info.aspx?chid=11&id=11352</li>
+<li id="cite36">移动支付网. 绵阳市商业银行 RPA 数字助手技术升级改造成交结果公示. https://m.mpaypass.com.cn/news/202601/12092910.html</li>
+<li id="cite37">移动支付网. 东营银行 RPA 机器人流程自动化项目二期建设成交结果公告. https://m.mpaypass.com.cn/news/202601/07091109.html</li>
+<li id="cite38">采招网. 德州银行采购机器人流程自动化（RPA）系统项目公开招标公告. https://m.bidcenter.com.cn/news-1-386255218.html</li>
+<li id="cite39">移动支付网. 成都银行机器人流程自动化工具采购项目中标结果公告. https://m.mpaypass.com.cn/news/202510/20090727.html</li>
+<li id="cite40">移动支付网. 南京银行南京分行 2025 年度 RPA 机器人许可采购项目结果公示. https://m.mpaypass.com.cn/news/202510/20090603.html</li>
+<li id="cite41">采招网. 湖北银行 2025 年 RPA 数字员工项目成交公告. https://m.bidcenter.com.cn/news-4-374679465.html</li>
+<li id="cite42">易采通. 云南省农村信用社联合社同业合作系统建设配套第三方应用软件（包 4 RPA）中标结果公告. https://www.e-czt.com/sdny_resultBulletin/2025-08-07/41755.html</li>
+<li id="cite43">安徽省农村信用社联合社. 机器人流程自动化平台（二次）中标结果公告. https://www.ahrcu.com/anhuinongxin/xwzx/tzgg/cggs/2025062716523097005/index.shtml</li>
+<li id="cite44">建宇 360. 宁银理财流程自动化机器人（RPA）产品 POC 项目供应商征集公告. https://www.jianyu360.cn/nologin/content/AXtY1xVcS4vKyg4GXxjdXIOMzNfDSZ0Znx1KT84OTogcFNzYhlUClU=.html</li>
+<li id="cite45">马鞍山农商银行. 马鞍山农商银行机器人流程自动化（RPA）项目中标候选人公示. http://www.masrcb.com/info/1009/7720.htm</li>
+<li id="cite46">海南农商银行. 流程自动化项目竞争性磋商成交结果公示. https://www.hainanbank.com.cn/html/swgk/tzgg/2025/0423/5873.html</li>
+<li id="cite47">淮安农商银行. 统计分析平台 RPA 自动补录功能采购项目采购结果公告. http://www.harcb.com/harcb/612044/612072/1205374/index.html</li>
+<li id="cite48">山东省农村信用社联合社. RPA 机器人流程自动化系统采购项目中标结果公示. https://www.sdrcu.com/sdnxs/374215/374223/374225/2024123017245975572/index.shtml</li>
+<li id="cite49">标找找. 北京银行 RPA 机器人自动化平台 2024 年建设项目（机器人授权采购）成交结果公告. https://m.biaozhaozhao.com/detail/cf5206b43d5c1e70eb03d4223f559d8f</li>
+<li id="cite50">移动支付网. 银行 RPA 项目招标情况汇总（长安银行、齐鲁银行、江阴农商行、嘉兴银行、新疆银行等）. https://m.mpaypass.com.cn/news/202409/24120351.html</li>
+<li id="cite51">采招网. 龙江银行 RPA 流程自动化系统开发服务外包采购项目中标候选人公示. https://m.bidcenter.com.cn/news-4-296824854.html</li>
+<li id="cite52">中国政府采购网. 吉林省农村信用社联合社机器人流程自动化系统（RPA）项目（二次）中标公告. http://www.ccgp.gov.cn/cggg/dfgg/zbgg/202407/t20240705_22554665.htm</li>
+<li id="cite53">北京银行. 北京银行天津分行 2024 年 RPA 机器人建设项目招标公告. https://login-cpm-xt.bankofbeijing.com.cn/cms/default/webfile/1ywgg1/20240611/985129495386128384.html</li>
+<li id="cite54">中国金融新闻网（长江商报）. 海门农商银行成功上线反洗钱 RPA 机器人系统. http://epaper.csjrw.cn/csjrb/20260527/mhtml/content_20260527002003.htm</li>
+<li id="cite55">移动支付网. 西安银行数字员工已覆盖 16 个经营管理部门，年省超 5 万小时. https://m.mpaypass.com.cn/news/202606/09095504.html</li>
+<li id="cite56">ai-indeed. RPA 在金融行业有什么用？降本增效 + 合规风控的双重解决方案. https://www.ai-indeed.com/encyclopedia/14275.html</li>
+<li id="cite57">i-search. RPA 在银行的十大应用典型场景. https://www.i-search.com.cn/RPAbaike/2025/0716/18261.html</li>
+<li id="cite58">UiPath. 禾城农商银行 RPA 账户全生命周期管理案例. https://www.uipath.com.cn/resources/automation-case-studies/hecheng-rural-commercial-bank</li>
+<li id="cite59">启信宝. 珠海金智维人工智能股份有限公司招投标信息. https://www.qixin.com/operation/b84dddeb-7d9f-44fc-b1c0-b33cfd316b09?section=bidding</li>
+<li id="cite60">CSDN. 大型企业都找哪家 RPA 厂商？https://blog.csdn.net/weixin_58820787/article/details/143701099</li>
+</ol>
+
+</body>
+</html>
